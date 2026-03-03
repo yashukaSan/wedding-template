@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <main className="h-full border">
-        <section className="flex justify-center mt-18 z-1 relative p-3 mb-2 text-2xl md:text-4xl lg:text-7xl lg:p-5 md:mb-5 uppercase font-mono">
+        <section className="animate-bounce-once flex w-screen text-center pt-10 xl:text-7xl justify-center mt-18 z-1 relative p-3 mb-2 text-2xl md:text-3xl lg:text-5xl lg:p-5 md:mb-5 uppercase font-mono">
           Hitohito Tadano & Shoko Komi
         </section>
 
@@ -30,7 +30,7 @@ export default function Home() {
             height={2000}
             className="absolute w-screen h-[60vh] z-0"
           />
-          <div className="border justify-center p-2 text-xl text-center flex-cols">
+          <div className="border animate-bounce-once justify-center p-2 text-xl text-center flex-cols">
             <p className="relative bg-black/50 p-6 md:text-3xl lg:text-4xl capitalize rounded-2xl m-auto z-1 text-2xl">
               With love and gratitude, we invite you to share <br /> in the joy
               of our wedding day.
