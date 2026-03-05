@@ -22,9 +22,11 @@ export default function OurStory() {
             11/05/2021
           </p>
         </div>
-        <div className="text-black grid justify-center">
-          <p>When Two Shy Wed</p>
-          <article className="text-center w-[50vw] font-stretch-normal">
+        <div className="text-black transition delay-200 duration-500 ease-in-out hover:bg-olive-500 uppercase bg-orange-300 p-8 bg- grid justify-center rounded-4xl">
+          <p className="m-auto font-bold text-3xl italic underline">
+            When Two Shy Wed
+          </p>
+          <article className="text-center font-serif w-[50vw] p-6 font-stretch-normal hover:bg-slate-500 duration-800 bg-red-300 rounded-3xl text-xl hover:text-yellow-200 ">
             <p>
               We met each other at High School, you sat next to me and you were
               the goddess of the school while I&apos;m just an ordinary boy,
@@ -36,6 +38,7 @@ export default function OurStory() {
               start hangng out with each other a lot. And Finally in the Thrid
               yaer , I propose you on the Valintine day.{" "}
             </p>
+            <br />
             <p>
               We chose our path for pur better future while stay in contact with
               other. Irrespective of our distance we keep our communication as
@@ -69,8 +72,8 @@ export default function OurStory() {
             />
           </div>
         </div>
-        <div className="grid justify-center bg-[#ff673a]/20 p-3 ">
-          <div className="text-black p-4 text-center ">
+        <div className="grid text-black hover:text-white justify-center bg-[#ff673a]/20 p-3 transition-all delay-0 duration-600 hover:bg-olive-700 ease-in-out rounded-4xl hover:mb-4 hover:shadow-red-500 shadow-2xl">
+          <div className="p-5 text-center text-xl">
             <p>
               It feels right to celebrate surrounded by the people who get us.
               <br />
@@ -78,7 +81,7 @@ export default function OurStory() {
             </p>
             <p>Onwards and upward to the adventure!</p>
           </div>
-          <button className="text-olive-300 bg-olive-700 mb-10 mt-3 w-[30vw] m-auto  rounded-full p-3">
+          <button className="text-black font-bold font-serif transition duration-500 delay-0 hover:bg-[#ff673a]/60 border-[#ff673a]/20 border-5 text-xl bg-olive-400 mb-10 mt-3 w-[30vw] m-auto  rounded-full p-3">
             RSVP
           </button>
         </div>
