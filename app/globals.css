@@ -12,6 +12,35 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer utilities {
+  @keyframes bounce-one {
+    0%, 100% {
+      transform: translateY(30px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+    @keyframes scroll-bounce {
+  
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+  
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  .animate-bounce-once {
+    animation: bounce-one 2s ease-in-out 1 forwards;
+  }
+    .animate-scroll-bounce {
+      animation: scroll-bounce 0.8s ease-in-out;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

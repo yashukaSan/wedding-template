@@ -1,6 +1,7 @@
 "use client";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import i2 from "./assets/s6.jpg";
 import i3 from "./assets/i1.webp";
 import i4 from "./assets/sk4.jpg";
@@ -8,16 +9,22 @@ import i5 from "./assets/i4.webp";
 import i6 from "./assets/i7.webp";
 import i7 from "./assets/office2.jpeg";
 
-
 export default function Home() {
-  
+  // Added generic types to the refs to satisfy TypeScript's strict null checking
+  const animateRef1 = useScrollAnimation<HTMLElement>();
+  const animateRef2 = useScrollAnimation<HTMLDivElement>();
+
   const router = useRouter();
-  const card = "hover:cursor-pointer hover:tranform  hover:translate-[-5px] w-75 xl:w-[40vw] xl:h-[55vh] md:text-3xl md:w-[30vw] my-3 xl:text-4xl h-100 flex justify-center items-center text-2xl rounded-xl underline";
+  const card: string =
+    "hover:cursor-pointer hover:tranform  hover:translate-[-5px] w-75 xl:w-[40vw] xl:h-[55vh] md:text-3xl md:w-[30vw] my-3 xl:text-4xl h-100 flex justify-center items-center text-2xl rounded-xl underline";
 
   return (
     <>
       <main className="h-full border">
-        <section className="animate-bounce-once flex w-screen text-center pt-10 xl:text-7xl justify-center mt-18 z-1 relative p-3 mb-2 text-2xl md:text-3xl lg:text-5xl lg:p-5 md:mb-5 uppercase font-mono">
+        <section
+          ref={animateRef1}
+          className="animate-scroll-bounce font-serif flex w-screen text-center pt-10 xl:text-7xl justify-center mt-18 z-1 relative p-3 mb-2 text-2xl md:text-3xl lg:text-5xl lg:p-5 md:mb-5 uppercase"
+        >
           Hitohito Tadano & Shoko Komi
         </section>
 
@@ -30,7 +37,10 @@ export default function Home() {
             height={2000}
             className="absolute w-screen h-[60vh] z-0"
           />
-          <div className="border animate-bounce-once justify-center p-2 text-xl text-center flex-cols">
+          <div
+            ref={animateRef2}
+            className="border justify-center p-2 text-xl text-center flex-cols"
+          >
             <p className="relative bg-black/50 p-6 md:text-3xl lg:text-4xl capitalize rounded-2xl m-auto z-1 text-2xl">
               With love and gratitude, we invite you to share <br /> in the joy
               of our wedding day.
@@ -81,9 +91,7 @@ export default function Home() {
               />
               <p className="z-1">RSVP</p>
             </div>
-            <div
-              className={card + "  flex justify-center md:ml-[66vw] xl:ml-0"}
-            >
+            <div className={`${card} flex justify-center md:ml-[66vw] xl:ml-0`}>
               <Image
                 src={i6}
                 height={100}
